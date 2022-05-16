@@ -1,0 +1,32 @@
+<div class="converter">
+  <div class="container">
+    <div class="inp">
+      <!-- <input (change)="onChange()" value="{{ result }}" type="number" /> -->
+      <select #c1 name="" id="currency1" (mouseleave)="changeBase1(c1.value)">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+      </select>
+
+      <!-- <input (change)="onChange()" value="{{ result }}" type="number" /> -->
+      <select #c2 name="" id="currency2" (mouseleave)="changeBase2(c2.value)">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+      </select>
+    </div>
+    <button
+      (click)="onChange()"
+      style="margin-left: 80px"
+      class="btn btn-primary"
+    >
+      Conversion
+    </button>
+
+    <div class="result">
+      <h3>1 {{ curr1 }}</h3>
+      <h3>=</h3>
+      <h3>{{ result }} {{ curr2 }}</h3>
+    </div>
+  </div>
+</div>
